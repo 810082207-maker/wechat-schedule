@@ -165,9 +165,9 @@ categories: ['工作', '学习', '生活', '健康', '娱乐', '其他']
 
 ## 💬 联系方式
 
-- 作者：Your Name
-- 邮箱：your.email@example.com
-- 微信：your-wechat-id
+- 作者：张晴
+- 邮箱：810082207@qq.com
+- 微信：zq810082207
 
 ## 🙏 致谢
 
