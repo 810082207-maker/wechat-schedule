@@ -1,0 +1,167 @@
+/* pages/index/index.wxss */
+.container {
+  min-height: 100vh;
+  padding-bottom: 100rpx;
+}
+
+.date-header {
+  background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+  padding: 40rpx 30rpx;
+  color: white;
+  text-align: center;
+}
+
+.date-text {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.schedule-list {
+  padding: 20rpx;
+}
+
+.schedule-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 24rpx;
+  background: white;
+  margin-bottom: 16rpx;
+  border-radius: 12rpx;
+  border-left: 6rpx solid #4A90E2;
+  position: relative;
+}
+
+.schedule-item.completed {
+  border-left-color: #52c41a;
+  opacity: 0.7;
+}
+
+.schedule-item.completed .schedule-title {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.schedule-item.cancelled {
+  border-left-color: #999;
+  opacity: 0.5;
+}
+
+.schedule-item.ongoing {
+  border-left-color: #fa8c16;
+  background: #fffbe6;
+}
+
+.schedule-item.overdue {
+  border-left-color: #f5222d;
+  opacity: 0.8;
+}
+
+.schedule-time {
+  min-width: 80rpx;
+  margin-right: 20rpx;
+}
+
+.time-text {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.schedule-content {
+  flex: 1;
+}
+
+.schedule-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8rpx;
+}
+
+.schedule-location {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 8rpx;
+}
+
+.schedule-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8rpx;
+}
+
+.tag {
+  font-size: 11px;
+  color: #4A90E2;
+  background: #e6f7ff;
+  padding: 4rpx 12rpx;
+  border-radius: 4rpx;
+}
+
+.schedule-actions {
+  margin-left: 16rpx;
+}
+
+.btn-complete {
+  font-size: 12px;
+  padding: 8rpx 20rpx;
+  background: #52c41a;
+  color: white;
+  border-radius: 20rpx;
+  border: none;
+  line-height: 1.5;
+}
+
+.btn-complete:active {
+  background: #389e0d;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 120rpx 40rpx;
+}
+
+.empty-icon {
+  font-size: 80px;
+  margin-bottom: 20rpx;
+}
+
+.empty-text {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 40rpx;
+}
+
+.add-btn {
+  padding: 20rpx 60rpx;
+  font-size: 14px;
+}
+
+.fab {
+  position: fixed;
+  right: 40rpx;
+  bottom: 120rpx;
+  width: 100rpx;
+  height: 100rpx;
+  background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8rpx 24rpx rgba(74, 144, 226, 0.4);
+}
+
+.fab-icon {
+  font-size: 48px;
+  color: white;
+  line-height: 1;
+}
+
+.loading {
+  text-align: center;
+  padding: 60rpx;
+  color: #999;
+}

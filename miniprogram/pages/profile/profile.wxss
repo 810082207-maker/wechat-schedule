@@ -1,0 +1,135 @@
+/* pages/profile/profile.wxss */
+.container {
+  min-height: 100vh;
+  padding: 20rpx;
+  background: #f5f5f5;
+}
+
+.user-card {
+  display: flex;
+  align-items: center;
+  padding: 32rpx;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.user-avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-right: 24rpx;
+  background: #e6f7ff;
+}
+
+.user-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 8rpx;
+}
+
+.user-name {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+
+.user-desc {
+  font-size: 13px;
+  color: #999;
+}
+
+.stats-card {
+  display: flex;
+  align-items: center;
+  padding: 32rpx;
+}
+
+.stat-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8rpx;
+}
+
+.stat-value {
+  font-size: 28px;
+  font-weight: 600;
+  color: #4A90E2;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #999;
+}
+
+.stat-divider {
+  width: 1rpx;
+  height: 60rpx;
+  background: #eee;
+}
+
+.tags-section {
+  padding: 24rpx;
+}
+
+.section-title {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 16rpx;
+}
+
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx;
+}
+
+.tag-item {
+  font-size: 13px;
+  color: #4A90E2;
+  background: #e6f7ff;
+  padding: 8rpx 20rpx;
+  border-radius: 20rpx;
+}
+
+.menu-list {
+  margin-top: 20rpx;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 24rpx;
+  margin-bottom: 12rpx;
+}
+
+.menu-icon {
+  font-size: 20px;
+  margin-right: 16rpx;
+}
+
+.menu-text {
+  flex: 1;
+  font-size: 15px;
+  color: #333;
+}
+
+.menu-arrow {
+  font-size: 24px;
+  color: #ccc;
+}
+
+.footer {
+  text-align: center;
+  padding: 60rpx 0 40rpx;
+}
+
+.footer-text {
+  font-size: 12px;
+  color: #ccc;
+}

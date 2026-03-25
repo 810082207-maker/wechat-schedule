@@ -1,0 +1,117 @@
+/* pages/schedule/schedule.wxss */
+.container {
+  padding: 20rpx;
+  padding-bottom: 200rpx;
+}
+
+.form-item {
+  background: white;
+  padding: 24rpx;
+  margin-bottom: 20rpx;
+  border-radius: 12rpx;
+}
+
+.form-row {
+  display: flex;
+  gap: 20rpx;
+}
+
+.form-item.half {
+  flex: 1;
+}
+
+.form-label {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12rpx;
+}
+
+.form-label.required::before {
+  content: '*';
+  color: #f5222d;
+  margin-right: 4rpx;
+}
+
+.form-input {
+  width: 100%;
+  font-size: 16px;
+  color: #333;
+  min-height: 40rpx;
+}
+
+.form-textarea {
+  width: 100%;
+  font-size: 16px;
+  color: #333;
+  min-height: 120rpx;
+}
+
+.picker-value {
+  font-size: 16px;
+  color: #333;
+  padding: 8rpx 0;
+}
+
+.tag-input-wrapper {
+  display: flex;
+  gap: 12rpx;
+}
+
+.tag-input {
+  flex: 1;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx;
+  margin-top: 16rpx;
+}
+
+.tag-item {
+  display: flex;
+  align-items: center;
+  gap: 8rpx;
+  background: #e6f7ff;
+  color: #4A90E2;
+  padding: 8rpx 16rpx;
+  border-radius: 20rpx;
+  font-size: 13px;
+}
+
+.tag-remove {
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 4rpx;
+}
+
+.form-actions {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20rpx;
+  background: white;
+  box-shadow: 0 -2rpx 8rpx rgba(0, 0, 0, 0.05);
+}
+
+.btn-save {
+  width: 100%;
+  padding: 24rpx;
+  font-size: 16px;
+  margin-bottom: 12rpx;
+}
+
+.btn-delete {
+  width: 100%;
+  padding: 24rpx;
+  font-size: 16px;
+  background: white;
+  color: #f5222d;
+  border: 2rpx solid #f5222d;
+  border-radius: 8rpx;
+}
+
+.btn-delete:active {
+  background: #fff1f0;
+}

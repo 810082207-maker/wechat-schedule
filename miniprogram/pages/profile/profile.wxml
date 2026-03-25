@@ -1,0 +1,65 @@
+<!--pages/profile/profile.wxml-->
+<view class="container">
+  <!-- 用户信息卡片 -->
+  <view class="user-card card">
+    <view class="user-info" bindtap="getUserProfile">
+      <image class="user-avatar" src="{{userInfo.avatar || '/images/default-avatar.png'}}" mode="aspectFill"></image>
+      <view class="user-detail">
+        <text class="user-name">{{userInfo.nickname || '点击登录'}}</text>
+        <text class="user-desc">管理你的每一天</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 统计数据 -->
+  <view class="stats-card card">
+    <view class="stat-item">
+      <text class="stat-value">{{stats.totalSchedules}}</text>
+      <text class="stat-label">本月日程</text>
+    </view>
+    <view class="stat-divider"></view>
+    <view class="stat-item">
+      <text class="stat-value">{{stats.completedSchedules}}</text>
+      <text class="stat-label">已完成</text>
+    </view>
+    <view class="stat-divider"></view>
+    <view class="stat-item">
+      <text class="stat-value">{{stats.completionRate}}%</text>
+      <text class="stat-label">完成率</text>
+    </view>
+  </view>
+
+  <!-- 常用标签 -->
+  <view class="tags-section card" wx:if="{{recentTags.length > 0}}">
+    <view class="section-title">常用标签</view>
+    <view class="tag-cloud">
+      <text class="tag-item" wx:for="{{recentTags}}" wx:key="*this">{{item}}</text>
+    </view>
+  </view>
+
+  <!-- 功能菜单 -->
+  <view class="menu-list">
+    <view class="menu-item card" bindtap="exportData">
+      <text class="menu-icon">📊</text>
+      <text class="menu-text">导出数据</text>
+      <text class="menu-arrow">›</text>
+    </view>
+
+    <view class="menu-item card" bindtap="clearCompleted">
+      <text class="menu-icon">🗑️</text>
+      <text class="menu-text">清除已完成日程</text>
+      <text class="menu-arrow">›</text>
+    </view>
+
+    <view class="menu-item card" bindtap="showAbout">
+      <text class="menu-icon">ℹ️</text>
+      <text class="menu-text">关于我们</text>
+      <text class="menu-arrow">›</text>
+    </view>
+  </view>
+
+  <!-- 底部提示 -->
+  <view class="footer">
+    <text class="footer-text">Made with ❤️ by Your Team</text>
+  </view>
+</view>

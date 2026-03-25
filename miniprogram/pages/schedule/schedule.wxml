@@ -1,0 +1,113 @@
+<!--pages/schedule/schedule.wxml-->
+<view class="container">
+  <form bindsubmit="saveSchedule">
+    <!-- 标题 -->
+    <view class="form-item">
+      <view class="form-label required">日程标题</view>
+      <input
+        class="form-input"
+        name="title"
+        value="{{title}}"
+        placeholder="请输入日程标题"
+        bindinput="onTitleInput"
+        maxlength="100"
+      />
+    </view>
+
+    <!-- 日期时间 -->
+    <view class="form-item">
+      <view class="form-label">日期</view>
+      <picker mode="date" value="{{date}}" bindchange="onDateChange">
+        <view class="picker-value">{{date}}</view>
+      </picker>
+    </view>
+
+    <view class="form-row">
+      <view class="form-item half">
+        <view class="form-label">开始时间</view>
+        <picker mode="time" value="{{startTime}}" bindchange="onStartTimeChange">
+          <view class="picker-value">{{startTime}}</view>
+        </picker>
+      </view>
+
+      <view class="form-item half">
+        <view class="form-label">结束时间</view>
+        <picker mode="time" value="{{endTime}}" bindchange="onEndTimeChange">
+          <view class="picker-value">{{endTime}}</view>
+        </picker>
+      </view>
+    </view>
+
+    <!-- 地点 -->
+    <view class="form-item">
+      <view class="form-label">地点</view>
+      <input
+        class="form-input"
+        name="location"
+        value="{{location}}"
+        placeholder="请输入地点（选填）"
+        bindinput="onLocationInput"
+        maxlength="100"
+      />
+    </view>
+
+    <!-- 分类 -->
+    <view class="form-item">
+      <view class="form-label">分类</view>
+      <picker mode="selector" range="{{categories}}" value="{{categoryIndex}}" bindchange="onCategoryChange">
+        <view class="picker-value">{{categories[categoryIndex]}}</view>
+      </picker>
+    </view>
+
+    <!-- 标签 -->
+    <view class="form-item">
+      <view class="form-label">标签</view>
+      <view class="tag-input-wrapper">
+        <input
+          class="form-input tag-input"
+          value="{{tagInput}}"
+          placeholder="输入标签后按回车添加"
+          bindinput="onTagInput"
+          confirm-type="done"
+          bindconfirm="addTag"
+        />
+      </view>
+      <view class="tag-list" wx:if="{{tags.length > 0}}">
+        <view class="tag-item" wx:for="{{tags}}" wx:key="*this">
+          <text>{{item}}</text>
+          <text class="tag-remove" bindtap="removeTag" data-index="{{index}}">×</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 提醒 -->
+    <view class="form-item">
+      <view class="form-label">提醒</view>
+      <picker mode="selector" range="{{reminderOptions}}" range-key="label" value="{{reminderIndex}}" bindchange="onReminderChange">
+        <view class="picker-value">{{reminderOptions[reminderIndex].label}}</view>
+      </picker>
+    </view>
+
+    <!-- 备注 -->
+    <view class="form-item">
+      <view class="form-label">备注</view>
+      <textarea
+        class="form-textarea"
+        name="description"
+        value="{{description}}"
+        placeholder="添加备注说明（选填）"
+        bindinput="onDescriptionInput"
+        maxlength="500"
+        auto-height
+      />
+    </view>
+
+    <!-- 操作按钮 -->
+    <view class="form-actions">
+      <button class="btn-primary btn-save" form-type="submit" bindtap="saveSchedule" loading="{{loading}}">
+        {{isEdit ? '保存修改' : '创建日程'}}
+      </button>
+      <button class="btn-delete" wx:if="{{isEdit}}" bindtap="deleteSchedule">删除日程</button>
+    </view>
+  </form>
+</view>
